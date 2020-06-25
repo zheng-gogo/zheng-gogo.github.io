@@ -17,7 +17,7 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>我的第一篇博客 | Hexo</title>
+  <title>我的第一篇博客 | zheng-gogo blog</title>
   <meta name="description" content="郑丽丽1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇博客">
@@ -44,21 +44,23 @@
   
   
   
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
+  
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 
-<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+<body class="main-center theme-purple" itemscope itemtype="http://schema.org/WebPage">
   <header class="header" itemscope itemtype="http://schema.org/WPHeader">
   <div class="slimContent">
     <div class="navbar-header">
       
       
       <div class="profile-block text-center">
-        <a id="avatar" href="https://github.com/cofess" target="_blank">
-          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        <a id="avatar" href="https://github.com/zheng-gogo" target="_blank">
+          <img class="img-circle img-rotate" src="/images/pic.jpg" width="200" height="200">
         </a>
-        <h2 id="name" class="hidden-xs hidden-sm">郑gogo</h2>
-        <h3 id="title" class="hidden-xs hidden-sm hidden-md">你要成为一个厉害的人鸭</h3>
+        <h2 id="name" class="hidden-xs hidden-sm">郑-gogo</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Java Programming</h3>
         <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Wuhan, China</small>
       </div>
       
@@ -182,7 +184,7 @@
 	
     <ul class="social-links">
     	
-        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        <li><a href="https://github.com/zheng-gogo" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
         <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
         
@@ -207,7 +209,7 @@
     <div class="widget-body">
         <div id="board">
             <div class="content">
-                <p>欢迎交流与分享经验!</p>
+                <p>博主每周发布两篇技术博客</p>
             </div>
         </div>
     </div>
@@ -334,12 +336,12 @@
   <div class="panel-body">
     <figure class="media">
       <div class="media-left">
-        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
-          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        <a href="https://github.com/zheng-gogo" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/pic.jpg" class="img-rounded w-full" alt="">
         </a>
       </div>
       <div class="media-body">
-        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">郑gogo</span><small class="ml-1x">你要成为一个厉害的人鸭</small></a></h3>
+        <h3 class="media-heading"><a href="https://github.com/zheng-gogo" target="_blank"><span class="text-dark">郑-gogo</span><small class="ml-1x">Java Programming</small></a></h3>
         <div>个人简介。</div>
       </div>
     </figure>
@@ -353,7 +355,7 @@
     
   <section id="comments">
   	
-      <div id="vcomments"></div>
+           
     
   </section>
 
@@ -441,7 +443,7 @@
 	
     <ul class="social-links">
     	
-        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        <li><a href="https://github.com/zheng-gogo" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
         
         <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
         
@@ -502,29 +504,23 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
     
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
   <script type="text/javascript">
-  var GUEST = ['nick', 'mail', 'link'];
-  var meta = 'nick,mail,link';
-  meta = meta.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#vcomments',
-    verify: false,
-    notify: false,
-    appId: '',
-    appKey: '',
-    placeholder: 'Just go go',
-    avatar: 'mm',
-    meta: meta,
-    pageSize: '10' || 10,
-    visitor: false
-  });
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: md5(location.pathname),
+    distractionFreeMode: true
+  })
+  gitalk.render('comments')
   </script>
 
-     
+      
 
 
 
